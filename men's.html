@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-variant: inherit;
+      }
+      .men {
+        border: 1px solid black;
+        text-align: center;
+        background: #f8f8f8;
+        font-weight: bold;
+
+        padding: 10px;
+      }
+      .filterAndProduct {
+        margin-top: 10px;
+        border: 1px solid black;
+        display: flex;
+        height: auto;
+      }
+      .sidebar {
+        border: 1px solid black;
+        flex: 0.7;
+        color: #4d484a;
+      }
+      .productDiv {
+        /* border: 1px solid black; */
+        flex: 3;
+        height: 410px;
+        margin-top: 7px;
+      }
+      .productDiv:hover {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      }
+      .sortBy {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;
+        background: #f8f8f8;
+        height: 45px;
+      }
+      select {
+        width: 170px;
+        height: 25px;
+        border: 1px solid gray;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: auto;
+        margin-top: 15px;
+      }
+      .productImg {
+        width: 70%;
+        height: 200px;
+        padding-left: 15%;
+      }
+      .productImg,
+      .title,
+      .price,
+      .discount,
+      .mix {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+      .discount,
+      .mix {
+        color: red;
+        font-weight: bold;
+        line-height: 10%;
+        padding-bottom: 10%;
+      }
+      .discount {
+        font-variant: small-caps;
+      }
+      .searchlogo {
+        width: 7%;
+
+        border: 1px solid black;
+        padding: 7px;
+      }
+      .brand,
+      .gender,
+      .types,
+      .filterby {
+        color: black;
+      }
+      .prores {
+        top: 0px;
+        padding-top: 0px;
+        line-height: 60%;
+        padding-left: 10px;
+      }
+      .bannerImg {
+        padding-left: 10px;
+      }
+
+      /* .carousal {
+        padding: 10px;
+      } */
+      .carousal > img {
+        width: 100%;
+      }
+
+      .rating > img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mensContainer">
+      <div class="header"></div>
+      <div class="men">Home</div>
+
+      <div class="filterAndProduct">
+        <div class="sidebar">
+          <h2 class="filterby">FILTER BY</h2>
+          <hr />
+          <h3 class="brand">BRAND</h3>
+          <div class="searchBar">
+            <input type="text" placeholder="Search Product" class="searched" />
+          </div>
+          <div class="gender">
+            <h3>GENDER</h3>
+            <p>Women</p>
+            <p>Men</p>
+          </div>
+          <div class="types">
+            <h3>TYPE</h3>
+            <p>Men's Clothing</p>
+            <p>Women's Clothing</p>
+            <p>Electronics</p>
+            <p>Jewelery</p>
+          </div>
+          <div class="carousal"></div>
+          <div class="rating"></div>
+        </div>
+
+        <div class="productsDiv">
+          <div class="banner">
+            <h2>MEN'S PERFUMES AND COLOGNES</h2>
+            <div class="bannerImg">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0910/0818/files/mens_for_website_Banner.jpg?v=1629988602"
+                alt=""
+              />
+            </div>
+            <div class="sortBy">
+              <p class="prores">Product results :</p>
+              <select name="" class="">
+                <option value="">SORT BY</option>
+                <option value="">Price, low to high</option>
+                <option value="">Price, hgih to low</option>
+              </select>
+            </div>
+
+            <div class="products"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  let id;
+  let id2;
+  import searchedQ from "./script/searchedItem.js";
+
+  import { getData, appendData } from "./script/get&appned.js";
+
+  let product = document.querySelector(".products");
+
+  let response = getData("https://fakestoreapi.com/products");
+
+  response.then((response) => {
+    appendData(response, product);
+  });
+
+  let input = document.querySelector(".searched");
+
+  input.addEventListener("keypress", searchUser);
+
+  async function searchUser(event) {
+    if (event.key === "Enter") {
+      //   console.log(event);
+      product.innerHTML = null;
+      let q = input.value;
+      console.log(q);
+
+      let res = await searchedQ(q);
+      appendData(res, product);
+      console.log(res);
+    }
+  }
+
+  let im = [
+    "https://scontent.fpnq7-4.fna.fbcdn.net/v/t39.30808-6/272196459_262122286028346_5005771080536906027_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=pPBRoEYgpw8AX_e3zXr&_nc_ht=scontent.fpnq7-4.fna&oh=00_AT8kOo8rNcrK50BnyzVcCUstVRsr6Z9AiG3CZP8lmwlGVw&oe=61EBC60E",
+    "https://scontent.fpnq7-2.fna.fbcdn.net/v/t39.30808-6/272095031_262122289361679_1516305440017454324_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=yIwun72OiJYAX9CTcBI&_nc_ht=scontent.fpnq7-2.fna&oh=00_AT-m7Z1SWc1jkLErBe7GQziKf-YqfkXZJKi_8QpHsPrMPQ&oe=61EBB50D",
+    "https://scontent.fpnq7-2.fna.fbcdn.net/v/t39.30808-6/272129266_262122279361680_1159559430303429156_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=cIVd_qJjfpEAX_xhOE6&_nc_ht=scontent.fpnq7-2.fna&oh=00_AT-PYZT-4BO3V3ArP2Edh3aDtja-MJ0SPTLMUTBnlppirg&oe=61EBB838",
+    "https://scontent.fpnq7-2.fna.fbcdn.net/v/t39.30808-6/272085431_262122299361678_3772888004896485683_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=kLZFfzUGwrMAX8IQ_Vt&_nc_ht=scontent.fpnq7-2.fna&oh=00_AT__RWvf0jhkjUQ5r3DN1yRR10FeQy_k78XAP_wEhgxkbg&oe=61EC49D8",
+    "https://scontent.fpnq7-4.fna.fbcdn.net/v/t39.30808-6/272165048_262122282695013_1580901225383193383_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=V1sp3h_3UUQAX_B0x3i&_nc_ht=scontent.fpnq7-4.fna&oh=00_AT-7XnAW7RYBiU3CvI64k-DEOr4Dx8tFrcndlPdDxQeJWQ&oe=61EB8906",
+  ];
+
+  function carousal() {
+    let carousalDiv = document.querySelector(".carousal");
+    let Img = document.createElement("img");
+    // Img.setAttribute("src", im[0]);
+
+    var i = 0;
+
+    id = setInterval(function () {
+      if (i == im.length) {
+        i = 0;
+      }
+      Img.src = im[i];
+      carousalDiv.append(Img);
+      i++;
+    }, 2000);
+  }
+
+  carousal();
+
+  let ratingImg = [
+    "https://scontent.fpnq7-1.fna.fbcdn.net/v/t39.30808-6/272194570_262134342693807_6499350201359551524_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=zQ8l1X90_F8AX-TLXTg&_nc_ht=scontent.fpnq7-1.fna&oh=00_AT-zOpcCXb9BY6VteXdfrDk4ejwrjbPwhpRxK1wPlyf-Sw&oe=61ED23B0",
+    "https://scontent.fpnq7-3.fna.fbcdn.net/v/t39.30808-6/272164162_262134346027140_7703156975455239242_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_ohc=eY9Z_eh9etkAX_63mB4&_nc_ht=scontent.fpnq7-3.fna&oh=00_AT_u54_XAeoZSLOjKaAT0q4xv65vmmt6IHoWTnXacxaWwQ&oe=61ECB0F2",
+    "https://scontent.fpnq7-4.fna.fbcdn.net/v/t39.30808-6/272133405_262134349360473_4708579499876079723_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_ohc=b9CviEGxQNUAX96lYHy&_nc_ht=scontent.fpnq7-4.fna&oh=00_AT8yKDpoMtQb4kQWVpAb5yWEIwjXrRn5AOF2z-FJMM3GOg&oe=61EC3F82",
+    "https://scontent.fpnq7-2.fna.fbcdn.net/v/t39.30808-6/272125537_262134396027135_3324663818092854752_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=QnXCg24FO0UAX-7rILY&tn=uF12ZIIv-NcbMCBB&_nc_ht=scontent.fpnq7-2.fna&oh=00_AT-jrqt3pArG8PYKEApqM5JzUFIaJU07pDABfBlw_1bBbw&oe=61EC2BF1",
+    "https://scontent.fpnq7-2.fna.fbcdn.net/v/t39.30808-6/272106688_262134406027134_5686371395934094153_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=6DpHMQG_V94AX8k5knf&_nc_ht=scontent.fpnq7-2.fna&oh=00_AT-huxdvPRUU2nLOEoOiSyHwnkpghCfnVBrDKNU_YsDD-g&oe=61EC9EF0",
+  ];
+
+  function ratingC() {
+    let ratingDiv = document.querySelector(".rating");
+    let ratingim = document.createElement("img");
+    ratingim.setAttribute("class", "ratingimg");
+
+    var j = 0;
+
+    id2 = setInterval(function () {
+      if (j == ratingImg.length) {
+        j = 0;
+      }
+      ratingim.src = ratingImg[j];
+      ratingDiv.append(ratingim);
+      j++;
+    }, 2000);
+  }
+  console.log(ratingImg);
+  ratingC();
+</script>
