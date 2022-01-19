@@ -10,12 +10,17 @@ async function getData(url) {
       console.log(error);
     }
   }
-//   getData();
 
+let selectedItem = []
   async function appendData(data, location) {
     data.map((elem) => {
       let productDiv = document.createElement("div");
       productDiv.setAttribute("class", "productDiv");
+
+      productDiv.onclick=()=>{
+
+       clickedProduct(elem)
+      }
 
       let productImg = document.createElement("img");
       productImg.setAttribute("src", elem.image);
@@ -40,6 +45,22 @@ async function getData(url) {
       productDiv.append(productImg, title, price, discount);
 
       location.append(productDiv);
+
+     
+      function clickedProduct(){
+
+        selectedItem.push(elem)
+        localStorage.setItem("selectedItem",JSON.stringify(selectedItem))
+        window.location.href="./selectedProduct.html"
+
+
+      }
+    
+
+
+
+
+
     });
   }
 
