@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #main
+        {
+            display:flex;
+            /* border:1px solid red; */
+            height:600px;
+            width:100%;
+
+        }
+
+        #one
+        {
+            height:80%;
+            width:35%;
+            /* border:1px solid royalblue; */
+            margin:auto;
+        }
+        #two
+        {
+            height:80%;
+            width:45%;
+            /* border:1px solid rgb(70, 225, 65); */
+            margin:auto;
+            font-family:sans-serif;
+            font-size: 18px;
+              font-weight:lighter;
+             line-height: 22.14px;
+            /* color: rgb(0, 0, 0); */
+        }
+          #two>h5{
+            color: #e84146;
+            font-size: large;
+            border-top:1px solid #e84146;
+            border-bottom:1px solid #e84146;
+            width:350px;
+        }
+        #p{
+            height:20px;
+            width:100px;
+            border:1px solid black;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        /* #two>p{
+            color: tomato;
+        } */
+        button{
+            width:300px;
+            height: 50px;
+             background-color: #267ab5; 
+            color:white;
+             border-color: #267ab5; 
+        }
+        button:hover {
+  background-color: white;
+  color: #267ab5;
+  border-color: #267ab5
+}
+img:hover {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      }
+
+    </style>
+  </head>
+  <body id="body">
+    <div id ="main">
+        <div id="one"></div>
+        <div id= "two">
+           
+                <p id="p">Online deal</p>
+           
+            
+            <!-- <label for="quantity">Quantity (between 1 and 5):</label> -->
+            <!-- <input type="number" id="quantity" name="quantity" min="1" max="5"> -->
+           
+        </div>
+
+    </div>
+  </body>
+</html>
+<script>
+  let selectedProduct = JSON.parse(localStorage.getItem("selectedItem")) ;
+ 
+   
+    display(selectedProduct)
+    function display(items)
+    {
+        var maindiv1 = document.getElementById("one")
+        var maindiv2 = document.getElementById("two")
+
+        items.map(function(elem)
+            {
+                let productDiv = document.createElement("div");
+                
+                // var div = document.createElement("div")
+
+                // var category = document.createElement("p")
+                // name.innerText=elem.category
+
+                // var img =document.createElement("img")
+                // img.src= elem.image
+                // img.style.width="100px"
+                // img.style.height="100px"
+                // let discount = document.createElement("p");
+                // discount.textContent = "BUY 1 GET 1 AT 30% OFF  ";
+                
+      let productImg = document.createElement("img");
+      productImg.setAttribute("src", elem.image);
+      productImg.setAttribute("class", "productImg");
+      productImg.style.width="400px"
+      productImg.style.height="400px"
+
+      let title = document.createElement("h3");
+      title.textContent = elem.title;
+      title.setAttribute("class", "title");
+
+      let price = document.createElement("h4");
+      price.textContent = "Price: " + "$" + elem.price;
+      price.setAttribute("class", "price");
+
+    //   let rating= document.createElement("h4")
+    //   rating.innerText="Rating:***"
+
+      let discount = document.createElement("h5");
+      discount.textContent = "MIX & MATCH! BUY 1 GET 1 AT 30% OFF  ";
+      discount.setAttribute("class", "discount");
+
+      let mix = document.createElement("p");
+      mix.textContent = "MIX & MATCH";
+      mix.setAttribute("class", "mix");
+
+      
+      
+
+        let newlabel = document.createElement("label");
+        newlabel.setAttribute("for","quantity");
+        newlabel.innerHTML = "Quantity:";
+    
+
+      let quantity = document.createElement("input")
+      quantity.setAttribute("type", "number");
+
+      let brea = document.createElement("br")
+      brea.innerHTML=""
+     
+
+     
+     
+        
+      
+
+        let button = document.createElement("button")
+        button.innerText="ADD TO BAG"
+        button.style.marginTop="40px";
+        
+    button.onclick=()=>{
+
+        window.location.href="./dummy.html"
+      }
+
+
+    //   let size = document.createElement("p")
+    //   size.innerText="Size:S,M,L"
+
+    //   let size_number= document.createElement("p")
+    //   size_number.innerText="S,M,L"
+
+    //   productDiv.append(productImg, title, price, discount);
+
+    //   body.append(productDiv);
+    //   document.querySelector("#body").append(productDiv)
+
+            //    discount.setAttribute("class", "discount");
+
+        // var price=document.createElement("p")
+        // price.innerHTML= `Price:${Math.ceil( Math.random()*500)} Rs`;
+
+        
+                
+         maindiv1.append(productImg)
+         maindiv2.append( title, price, discount,newlabel,quantity,brea,button)
+        //  document.querySelector("#button").append(button)
+
+    //    document.querySelector("#body").append(div)
+
+    })
+}
+    
+</script>
