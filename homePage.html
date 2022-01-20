@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./homepageStyles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>HomePage</title>
+  </head>
+
+  <body>
+    <div class="mainContainer">
+      <!-- ------homePage middleimage part----- -->
+
+      <div class="Homepg-Container">
+        <div class="upper-image">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0910/0818/files/TFO_01-17-20-2022_3for99WebBanner.jpg?v=1642426150"
+            style="max-width: 100%"
+          />
+        </div>
+        <div class="main-bestSeller-box">
+          <div class="bestSeller-box">
+            <div class="bestSeller">BEST SELLERS</div>
+
+            <div class="viewAll-1">VIEW ALL</div>
+          </div>
+          <div class="bestSeller-carousel-box">
+            <div class="container">
+              <div class="mySlides">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/products/Versace-Man-Eau-Fraiche-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626958495"
+                  style="width: 100%"
+                />
+              </div>
+
+              <div class="mySlides">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/products/Versace-Pour-Homme-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626814302"
+                  style="width: 100%"
+                />
+              </div>
+
+              <div class="mySlides">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/products/Jean-Paul-Gaultier-Jean-Paul-Gaultier-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626972508"
+                  style="width: 100%"
+                />
+              </div>
+
+              <div class="mySlides">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/products/Ralph-Lauren-Polo-Blue-Mens-Eau-de-Toilette-Spray-1.4-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626960261"
+                  style="width: 100%"
+                />
+              </div>
+
+              <div class="mySlides">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/products/Davidoff-Cool-Water-Mens-Eau-de-Toilette-Spray-4.2-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Details_300x.jpg?v=1627011862"
+                  style="width: 100%"
+                />
+              </div>
+
+              <div class="mySlides">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/products/Ralph-Lauren-Polo-Black-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626819772"
+                  style="width: 100%"
+                />
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="row">
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="https://cdn.shopify.com/s/files/1/0910/0818/products/Versace-Man-Eau-Fraiche-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626958495"
+                    style="width: 100%"
+                    onclick="currentSlide(1)"
+                    alt="The Woods"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="https://cdn.shopify.com/s/files/1/0910/0818/products/Versace-Pour-Homme-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626814302"
+                    style="width: 100%"
+                    onclick="currentSlide(2)"
+                    alt="Cinque Terre"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="https://cdn.shopify.com/s/files/1/0910/0818/products/Jean-Paul-Gaultier-Jean-Paul-Gaultier-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626972508"
+                    style="width: 100%"
+                    onclick="currentSlide(3)"
+                    alt="Mountains and fjords"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="https://cdn.shopify.com/s/files/1/0910/0818/products/Ralph-Lauren-Polo-Blue-Mens-Eau-de-Toilette-Spray-1.4-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626960261"
+                    style="width: 100%"
+                    onclick="currentSlide(4)"
+                    alt="Northern Lights"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="https://cdn.shopify.com/s/files/1/0910/0818/products/Davidoff-Cool-Water-Mens-Eau-de-Toilette-Spray-4.2-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Details_300x.jpg?v=1627011862"
+                    style="width: 100%"
+                    onclick="currentSlide(5)"
+                    alt="Nature and sunrise"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="https://cdn.shopify.com/s/files/1/0910/0818/products/Ralph-Lauren-Polo-Black-Mens-Eau-de-Toilette-Spray-6.7-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Main_300x.jpg?v=1626819772"
+                    style="width: 100%"
+                    onclick="currentSlide(6)"
+                    alt="Snowy Mountains"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menWomen-image">
+          <div class="menImage">
+            <img
+              class="menImageblack"
+              src="https://cdn.shopify.com/s/files/1/0910/0818/files/Mens_Fragrances_Final2_1200x_crop_center.gif?v=1624972907"
+            />
+          </div>
+          <div class="womenImage">
+            <img
+              class="womenImageblack"
+              src="https://cdn.shopify.com/s/files/1/0910/0818/files/Womans_Fragrances_Final_cadf2227-9e86-4fde-a21a-77835d1c6523_1200x_crop_center.gif?v=1624972892"
+              style="max-width: 100%"
+            />
+          </div>
+        </div>
+        <div class="buy1Get1-image">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0910/0818/files/bogo_banner_for_website_FINAL.gif?v=1629918245"
+            style="max-width: 100%; max-height: 100%"
+          />
+        </div>
+        <div class="celebFragrance-box">
+          <div class="celebFragrance">CELEBRITY FRAGRANCES</div>
+
+          <!-- <div class="viewAll-2">VIEW ALL</div> -->
+        </div>
+      </div>
+      <!-- -------------footerPart-------- -->
+      <footer class="footer">
+        <div class="footerContainer">
+          <div class="row">
+            <div class="footer-col">
+              <div class="headings">FIND PRODUCTS</div>
+              <ul>
+                <li><a href="#">Women's Fragrances</a></li>
+                <li><a href="#">Men's Fragrances</a></li>
+                <li><a href="#">Gift Sets</a></li>
+                <li><a href="#">For Kids</a></li>
+                <li><a href="#">Skincare</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <div class="headings">ABOUT FRAGRANCE <br />OUTLET</div>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Career</a></li>
+              </ul>
+              <br />
+
+              <div class="headings">YOUR ACCOUNT</div>
+              <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">My Wishlist</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <div class="headings">HELP & FAQS</div>
+              <ul>
+                <li><a href="#">Order Lookup</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Shipping & Processing</a></li>
+                <li><a href="#">Terms of Services</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Accessibility Statement</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <div class="headings">Find us</div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="payPartners">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0910/0818/t/141/assets/bitmap.png?v=2961664016557393698"
+                />
+              </div>
+              <div class="rights">
+                <h5>© 2022 Fragranceoutlet.com ®. All Rights <br />Reserved</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./HomepageJs.js" />
+  </body>
+</html>

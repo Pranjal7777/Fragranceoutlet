@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+}
+.mainContainer {
+  max-width: 1170px;
+
+  margin: auto;
+  /* border: 2px solid blue; */
+  width: 100vw;
+  height: 55vh;
+}
+/* ----1st image------ */
+
+.upper-image {
+  vertical-align: middle;
+  /* border: 1px dotted #24262b; */
+}
+/* -----1st empty box of bestsellers---- */
+
+.bestSeller-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1170px;
+
+  margin: auto;
+  border: 2px solid rgb(255, 0, 212);
+  width: 100vw;
+  margin-top: 35px;
+}
+.bestSeller {
+  font-family: Montserrat, sans-serif, Arial, "sans-serif";
+  color: #615959;
+  text-align: center;
+  /* margin-top: 35px; */
+  font-size: x-large;
+  border: 2px solid blueviolet;
+  width: fit-content;
+  margin: auto;
+  letter-spacing: 2.63px;
+}
+/* .bestSeller-carousel-box {
+  width: 1000px;
+  height: 300px;
+  margin: auto;
+} */
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  /* width: 1000px;
+  height: 300px;
+  margin: auto; */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 30%;
+  margin: auto;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  width: 30%;
+  margin: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.viewAll-1 {
+  border: solid 1px #242424;
+  width: 120px;
+  letter-spacing: 2.63px;
+  padding: 9px 5px 5px;
+  text-align: center;
+  /* display: inline-block; */
+  line-height: 1.14;
+  font-family: forma-djr-display, sans-serif;
+  position: absolute;
+}
+.menWomen-image {
+  display: flex;
+  max-width: 1170px;
+
+  margin: auto;
+  border: 2px solid rgb(0, 183, 255);
+  width: 100vw;
+  margin-top: 35px;
+}
+.menImage > .menImageblack {
+  height: 375px;
+  width: 600px;
+}
+.womenImage > .womenImageblack {
+  height: 375px;
+  width: 600px;
+}
+.buy1Get1-image {
+  max-width: 1170px;
+
+  margin: auto;
+  border: 2px solid #00fff2;
+  width: 100vw;
+  height: 25vh;
+  margin-top: 35px;
+}
+/* ------2nd empty box celebFrag------ */
+
+.celebFragrance-box {
+  /* display: flex; */
+  max-width: 1170px;
+
+  margin: auto;
+  border: 2px solid brown;
+  width: 100vw;
+  height: 55vh;
+  margin-top: 35px;
+}
+.celebFragrance {
+  font-family: Montserrat, sans-serif, Arial, "sans-serif";
+  color: #615959;
+  text-align: center;
+  /* margin-top: 35px; */
+  font-size: x-large;
+  border: 2px solid mediumseagreen;
+  width: fit-content;
+  margin: auto;
+  letter-spacing: 2.63px;
+}
+.viewAll-2 {
+  border: solid 1px #242424;
+  width: 120px;
+  letter-spacing: 2.63px;
+  padding: 9px 5px 5px;
+  text-align: center;
+  /* display: inline-block; */
+  line-height: 1.14;
+  font-family: forma-djr-display, sans-serif;
+  position: absolute;
+}
+
+/* -------footerPart------- */
+body {
+  line-height: 1.5;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: Montserrat, sans-serif, Arial, "sans-serif";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footerContainer {
+  max-width: 1150px;
+
+  margin: auto;
+  /* border: 2px solid blue; */
+  width: 100vw;
+  height: 55vh;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #ffffff;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  letter-spacing: 2.63px;
+}
+/* -----footer headings----- */
+.footer-col .headings {
+  font-size: 18px;
+  color: #24262b;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 400;
+  position: relative;
+  /* border: 2px solid blue; */
+}
+
+/* ------underline under headings------- */
+
+/* .footer-col .headings::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63; 
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+   
+  } */
+
+/* --- margin between to properties---- */
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ----transition effect on each prop---- */
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #24262b;
+  text-decoration: none;
+  font-weight: 300;
+  color: #615959;
+  display: block;
+  transition: all 0.3s ease;
+  /* background-color: chartreuse; */
+}
+
+/* ------ effect on each prop----  */
+.footer-col ul li a:hover {
+  color: #24262b;
+  padding-left: 8px;
+  /* background-color: crimson; */
+}
+.footer-col .social-links a {
+  display: inline block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 20px 20px 0;
+  text-align: center;
+  line-height: 40px;
+  /* border-radius: 50%; */
+  color: #24262b;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #55565a;
+}
+.footer-col .payPartners {
+  text-align: center;
+  text-decoration: none;
+  color: #55565a;
+  /* border: 2px solid red; */
+  width: 70vw;
+  margin-top: 35px;
+}
+
+.footer-col .rights {
+  text-align: center;
+  text-decoration: none;
+  color: #55565a;
+  /* border: 2px solid red; */
+  width: 70vw;
+  margin-top: 45px;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
