@@ -508,6 +508,29 @@
   outline: none;
   border: none;
   color: white;
+  cursor: pointer;
+}
+/* Go to top Button */
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: silver;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  border: 1px solid silver;
+}
+
+#goToTopBtn:hover {
+  background-color: black;
+  color: white;
 }
 /* -------footerPart------- */
 body {
