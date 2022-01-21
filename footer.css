@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+.mainFooter {
+  max-width: 1170px;
+
+  margin: auto;
+  /* border: 2px solid blue; */
+  width: 100vw;
+  height: 55vh;
+}
+.footer {
+  background-color: #ffffff;
+  padding: 70px 0px;
+}
+.footerContainer {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-family: Montserrat, sans-serif, Arial, "sans-serif";
+  max-width: 1150px;
+
+  margin: auto;
+  /* border: 2px solid blue; */
+  width: 100vw;
+  height: 55vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  letter-spacing: 2.63px;
+  text-align: left;
+}
+/* -----footer headings----- */
+.footer-col .headings {
+  font-size: 18px;
+  color: #24262b;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 400;
+  /* border: 2px solid blue; */
+}
+
+/* --- margin between to properties---- */
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ----transition effect on each prop---- */
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #24262b;
+  text-decoration: none;
+  font-weight: 300;
+  color: #615959;
+  display: block;
+  transition: all 0.3s ease;
+  /* background-color: chartreuse; */
+}
+
+/* ------ effect on each prop----  */
+.footer-col ul li a:hover {
+  color: #24262b;
+  padding-left: 8px;
+  /* background-color: crimson; */
+}
+.footer-col .social-links a {
+  display: inline block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 20px 20px 0;
+  text-align: center;
+  line-height: 40px;
+
+  color: #24262b;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #55565a;
+}
+.footer-col .payPartners {
+  text-align: center;
+  text-decoration: none;
+  color: #55565a;
+  /* border: 2px solid red; */
+  width: 70vw;
+  margin-top: 35px;
+}
+
+.footer-col .rights {
+  text-align: center;
+  text-decoration: none;
+  color: #55565a;
+  /* border: 2px solid red; */
+  width: 70vw;
+  margin-top: 45px;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
