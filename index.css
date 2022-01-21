@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .mainContainer {
-  max-width: 1170px;
+  max-width: 90%;
 
   margin: auto;
   /* border: 2px solid blue; */
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  max-width: 1170px;
+  max-width: 90%;
 
   margin: auto;
   /* border: 2px solid rgb(255, 0, 212); */
@@ -41,7 +41,7 @@
 }
 .viewAll-1 {
   border: solid 1px #242424;
-  width: 120px;
+  width: 8%;
   letter-spacing: 2.63px;
   padding: 9px 5px 5px;
   text-align: center;
@@ -57,7 +57,7 @@
 } */
 
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+.carousel-box-container {
   position: relative;
   /* width: 1000px;
   height: 300px;
@@ -77,8 +77,8 @@
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev1,
+.next1 {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -94,7 +94,7 @@
 }
 
 /* Position the "next button" to the right */
-.next {
+.next1 {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -109,6 +109,11 @@
   margin: auto;
 }
 /* ----- bestseller spray details--- */
+.bestsellerSpray {
+  display: grid;
+  width: 100%;
+  grid-row: auto;
+}
 .bestsellerSpray > .sprayTitle {
   letter-spacing: 2.63px;
   font-family: forma-djr-display, sans-serif;
@@ -125,7 +130,7 @@
 }
 .bestsellerSpray > .sprayCaption {
   color: #000;
-  display: block;
+  /* display: block; */
   margin-bottom: 4px;
   text-transform: capitalize;
   font-family: forma-djr-display, sans-serif;
@@ -136,16 +141,18 @@
   line-height: 1.31;
   letter-spacing: 2px;
   text-align: center;
+  display: grid;
+  grid-row: auto;
 }
 
-.row:after {
+.rowSpray:after {
   content: "";
   display: table;
   clear: both;
 }
 
 /* Six columns side by side */
-.column {
+.columnSpray {
   float: left;
   width: 16.66%;
 }
@@ -162,28 +169,28 @@
 
 .menWomen-image {
   display: flex;
-  max-width: 1170px;
+  max-width: 100%;
 
   margin: auto;
   /* border: 2px solid rgb(0, 183, 255); */
-  width: 100vw;
+  /* width: 100vw; */
   margin-top: 35px;
 }
 .menImage > .menImageblack {
-  height: 375px;
-  width: 600px;
+  /* height: 375px; */
+  width: 100%;
 }
 .womenImage > .womenImageblack {
-  height: 375px;
-  width: 600px;
+  /* height: 375px; */
+  width: 100%;
 }
 .buy1Get1-image {
-  max-width: 1170px;
+  max-width: 100%;
 
   margin: auto;
   /* border: 2px solid #00fff2; */
   width: 100vw;
-  height: 25vh;
+  height: 30vh;
   margin-top: 35px;
 }
 /* ------2nd empty box celebFrag------ */
@@ -303,7 +310,7 @@
   overflow: hidden;
 }
 .below-gift-sets-card > img {
-  width: 385px;
+  width: 100%;
   padding: 3%;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -317,20 +324,24 @@
 .below-gift-sets-text :nth-child(1) {
   font-size: 1.2rem;
   color: #2c2c2c;
-  padding: 3%;
+  /* padding: 3%; */
   text-align: center;
+  /* border: 2px solid rgb(0, 23, 128); */
+  margin-bottom: 0;
 }
 .below-gift-sets-text :nth-child(2) {
   font-size: 25px;
   color: #5f5f5f;
-  padding: 3%;
+  /* padding: 3%; */
   text-align: center;
+  /* border: 2px solid olive; */
 }
 /* -------top brands---- */
 .topBrands-box {
-  max-width: 1170px;
+  max-width: 100%;
   width: 100vw;
   margin-top: 50px;
+
   /* border: 1px solid red; */
 }
 .topBrands {
@@ -340,6 +351,7 @@
   font-size: 35px;
   margin: auto;
   letter-spacing: 2.63px;
+  padding: 3%;
 }
 .top-brands-img-cont {
   height: 120px;
@@ -349,6 +361,7 @@
   align-items: center;
   background-color: rgb(233, 233, 233);
   margin-top: 30px;
+  /* display: none; */
 }
 /* Below top brands big card */
 .below-brand-big-card {
@@ -410,7 +423,7 @@
   display: block;
   /* justify-content: flex-end; */
   align-items: center;
-  max-width: 1170px;
+  max-width: 100%;
 
   margin: auto;
   width: 100vw;
@@ -541,7 +554,7 @@
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
   font-family: Montserrat, sans-serif, Arial, "sans-serif";
-  max-width: 1150px;
+  max-width: 120%;
 
   margin: auto;
   /* border: 2px solid blue; */
@@ -621,17 +634,19 @@ ul {
   text-decoration: none;
   color: #55565a;
   /* border: 2px solid red; */
-  width: 70vw;
-  margin-top: 35px;
+  width: 80vw;
+  margin-top: 15px;
+  padding-left: 10%;
 }
 
 .footer-col .rights {
   text-align: center;
   text-decoration: none;
-  color: #55565a;
+  color: #8d8d8f;
   /* border: 2px solid red; */
-  width: 70vw;
+  width: 80vw;
   margin-top: 45px;
+  padding-left: 10%;
 }
 
 /*responsive*/
@@ -646,3 +661,4 @@ ul {
     width: 100%;
   }
 }
+/* ======media queries for bestseller===== */
