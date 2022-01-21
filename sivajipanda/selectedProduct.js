@@ -60,11 +60,12 @@ function display(items)
         window.location.href="./dummy.html"
     }
 
-
+    let details= document.createElement("details")
+     details.innerText= " You may return any unopened merchandise in its original condition, including original sealed packaging within 30 days of invoice date and you will receive a full refund, less shipping and gift-wrapping charges. "
         
                 
         maindiv1.append(productImg)
-        maindiv2.append( title, price, discount,newlabel,quantity,brea,button)
+        maindiv2.append( title, price, discount,newlabel,quantity,brea,button,details)
     
 
     })
