@@ -16,7 +16,7 @@ and alse used debouncer and carousals n homepage
 used Import export
 
 
-!!Snap Shots
+<h1>Snap Shots</h1>
 ![Screenshot (324)](https://user-images.githubusercontent.com/70562454/191041767-cfb49623-f30a-4d0e-b4a2-2e0993ba3680.png)
 ![Screenshot (325)](https://user-images.githubusercontent.com/70562454/191041807-15378f82-bab0-4f6e-b68e-af69fe16fcba.png)
 ![Screenshot (326)](https://user-images.githubusercontent.com/70562454/191041821-00a51e37-0ae5-4467-883d-b61cb4fc3010.png)
